@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		E3C9660B22366EA30093021A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9660A22366EA30093021A /* AppDelegate.swift */; };
-		E3C9660D22366EA30093021A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9660C22366EA30093021A /* ViewController.swift */; };
+		E3C9660D22366EA30093021A /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9660C22366EA30093021A /* ToDoViewController.swift */; };
 		E3C9661022366EA30093021A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C9660E22366EA30093021A /* Main.storyboard */; };
 		E3C9661222366EA50093021A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3C9661122366EA50093021A /* Assets.xcassets */; };
 		E3C9661522366EA50093021A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C9661322366EA50093021A /* LaunchScreen.storyboard */; };
+		E3C9661E223672180093021A /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9661D223672180093021A /* ToDoTableViewCell.swift */; };
+		E3C96622223672E60093021A /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C96621223672E60093021A /* AddToDoViewController.swift */; };
+		E3FDE453223AC97B00100297 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDE452223AC97B00100297 /* Priority.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E3C9660722366EA30093021A /* ToDo-Realm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo-Realm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C9660A22366EA30093021A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E3C9660C22366EA30093021A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E3C9660C22366EA30093021A /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		E3C9660F22366EA30093021A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3C9661122366EA50093021A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3C9661422366EA50093021A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3C9661622366EA50093021A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3C9661D223672180093021A /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
+		E3C96621223672E60093021A /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
+		E3FDE452223AC97B00100297 /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		E3C9660922366EA30093021A /* ToDo-Realm */ = {
 			isa = PBXGroup;
 			children = (
+				E3FDE451223AC94900100297 /* Model */,
+				E3C9661C223672050093021A /* Scene */,
 				E3C9660A22366EA30093021A /* AppDelegate.swift */,
-				E3C9660C22366EA30093021A /* ViewController.swift */,
 				E3C9660E22366EA30093021A /* Main.storyboard */,
 				E3C9661122366EA50093021A /* Assets.xcassets */,
 				E3C9661322366EA50093021A /* LaunchScreen.storyboard */,
 				E3C9661622366EA50093021A /* Info.plist */,
 			);
 			path = "ToDo-Realm";
+			sourceTree = "<group>";
+		};
+		E3C9661C223672050093021A /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				E3C96620223672A40093021A /* Add ToDo */,
+				E3C9661F223672950093021A /* ToDo List */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		E3C9661F223672950093021A /* ToDo List */ = {
+			isa = PBXGroup;
+			children = (
+				E3C9660C22366EA30093021A /* ToDoViewController.swift */,
+				E3C9661D223672180093021A /* ToDoTableViewCell.swift */,
+			);
+			path = "ToDo List";
+			sourceTree = "<group>";
+		};
+		E3C96620223672A40093021A /* Add ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				E3C96621223672E60093021A /* AddToDoViewController.swift */,
+			);
+			path = "Add ToDo";
+			sourceTree = "<group>";
+		};
+		E3FDE451223AC94900100297 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E3FDE452223AC97B00100297 /* Priority.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +137,7 @@
 				TargetAttributes = {
 					E3C9660622366EA30093021A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -135,7 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3C9660D22366EA30093021A /* ViewController.swift in Sources */,
+				E3C96622223672E60093021A /* AddToDoViewController.swift in Sources */,
+				E3C9661E223672180093021A /* ToDoTableViewCell.swift in Sources */,
+				E3C9660D22366EA30093021A /* ToDoViewController.swift in Sources */,
+				E3FDE453223AC97B00100297 /* Priority.swift in Sources */,
 				E3C9660B22366EA30093021A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +336,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "it.xCoding.ToDo-Realm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -309,7 +354,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "it.xCoding.ToDo-Realm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
